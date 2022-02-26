@@ -1,0 +1,20 @@
+apiVersion: aps/v1
+kind: ReplicaSet
+metadata:
+  name: my-app-replicaset
+  labels:
+    app: myapp 
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 3
+  template:
+    metadata:
+      name: tes-from-yaml
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: nginx-test 
+          image: nginx

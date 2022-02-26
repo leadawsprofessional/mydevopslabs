@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: tes-from-yamal
+  name: tes-from-yaml
   labels:
     env: production
 spec:
   containers:
-    - name: nginx
+    - name: nginx-test
       image: nginx
