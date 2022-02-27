@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app-deployment
+  labels:
+    app: myapp 
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 3
+  template:
+    metadata:
+      name: tes-from-yaml
+      labels:
+        app: myapp
+    spec:
+      containers:
+        - name: nginx-test 
+          image: nginx
