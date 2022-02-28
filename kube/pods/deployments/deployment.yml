@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
+  name: webapp-deployment
   labels:
-    app: myapp 
+    app: webapp 
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: webapp
   replicas: 6
   template:
     metadata:
-      name: tes-from-yaml
+      name: webapp-test-from-yaml
       labels:
-        app: myapp
+        app: webapp
     spec:
       containers:
-        - name: nginx-test 
-          image: nginx
+        - name: webapp 
+          image: kodekloud/webapp-color:v1
